@@ -1,0 +1,150 @@
+[gd_scene load_steps=27 format=3 uid="uid://dm72f63gah7vl"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_0h84g"]
+[ext_resource type="AudioStream" uid="uid://ty54eoe8bt1o" path="res://assets/sfx.mp3" id="2_pwl2n"]
+[ext_resource type="Shader" path="res://main.gdshader" id="3_eafcs"]
+[ext_resource type="Texture2D" uid="uid://ckmdrrbhd5ouh" path="res://assets/chatpgt.png" id="3_ecp8j"]
+[ext_resource type="Texture2D" uid="uid://b2k8cnsyoqdqs" path="res://assets/button.png" id="3_s0m7k"]
+[ext_resource type="FontFile" uid="uid://7v13turaox6d" path="res://assets/CoffeehouseCyrilic-Regular_0.otf" id="4_b5w8g"]
+[ext_resource type="Texture2D" uid="uid://ch2q1owubi544" path="res://assets/exit_1.png" id="7_b2dfy"]
+[ext_resource type="Texture2D" uid="uid://hc6hwa6plot" path="res://assets/exit_2.png" id="8_l51es"]
+[ext_resource type="Texture2D" uid="uid://cy8p5yauqnxe1" path="res://assets/vomit/frame_14.png" id="9_mtue3"]
+[ext_resource type="Texture2D" uid="uid://bqoou3nym6nm1" path="res://assets/vomit/frame_15.png" id="10_3iqhx"]
+[ext_resource type="Texture2D" uid="uid://hgncsq6ug1vw" path="res://assets/vomit/frame_27.png" id="11_2xd7y"]
+[ext_resource type="Texture2D" uid="uid://bosutc4xr0ooo" path="res://assets/vomit/frame_28.png" id="12_3baiu"]
+[ext_resource type="Texture2D" uid="uid://rk8dw7lkisbe" path="res://assets/vomit/frame_29.png" id="13_aey5v"]
+[ext_resource type="Texture2D" uid="uid://n06hnpqmpt32" path="res://assets/vomit/frame_30.png" id="14_v5iv7"]
+[ext_resource type="Texture2D" uid="uid://boht0p1mtjo8r" path="res://assets/vomit/frame_31.png" id="15_44j1g"]
+[ext_resource type="Texture2D" uid="uid://2ic21lhoxdkh" path="res://assets/vomit/frame_32.png" id="16_lkevq"]
+[ext_resource type="Texture2D" uid="uid://dbtgbleqksotk" path="res://assets/vomit/frame_33.png" id="17_5bcwk"]
+[ext_resource type="Texture2D" uid="uid://d6a54ehcriws" path="res://assets/vomit/frame_34.png" id="18_8mrt3"]
+[ext_resource type="Texture2D" uid="uid://dm1aweb285il1" path="res://assets/vomit/frame_35.png" id="19_43wa0"]
+[ext_resource type="Texture2D" uid="uid://bvkkb8kos57w0" path="res://assets/vomit/frame_36.png" id="20_q06ob"]
+[ext_resource type="Texture2D" uid="uid://c44ify2ytx00" path="res://assets/vomit/frame_40.png" id="21_w33gx"]
+[ext_resource type="Texture2D" uid="uid://ieam6dqy0h4y" path="res://assets/vomit/frame_44.png" id="22_57osr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_814ps"]
+font = ExtResource("4_b5w8g")
+font_size = 27
+outline_size = 1
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sl2g1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_mtue3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_3iqhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2xd7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_3baiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_aey5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_v5iv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_44j1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_lkevq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5bcwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_8mrt3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_43wa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_q06ob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_w33gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_57osr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kpfe2"]
+shader = ExtResource("3_eafcs")
+shader_parameter/glow_time = null
+
+[sub_resource type="LabelSettings" id="LabelSettings_e6k4d"]
+font = ExtResource("4_b5w8g")
+font_size = 120
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_0h84g")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 1028.0
+offset_bottom = 1278.0
+texture = ExtResource("3_ecp8j")
+
+[node name="backlabel" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(372, 259)
+scale = Vector2(0.740216, 0.748447)
+texture = ExtResource("3_s0m7k")
+
+[node name="price" type="Label" parent="."]
+visible = false
+offset_left = 195.0
+offset_top = 202.0
+offset_right = 554.0
+offset_bottom = 315.0
+text = "Alchocolic"
+label_settings = SubResource("LabelSettings_814ps")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Vomit" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(361, 651)
+scale = Vector2(1.53759, 1.57389)
+sprite_frames = SubResource("SpriteFrames_sl2g1")
+frame = 13
+frame_progress = 0.632609
+
+[node name="BeerSprite" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_kpfe2")
+position = Vector2(356, 763)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 719.0
+offset_bottom = 173.0
+text = "0"
+label_settings = SubResource("LabelSettings_e6k4d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GulpSound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(221, 378)
+stream = ExtResource("2_pwl2n")
+
+[node name="Exit" type="TextureButton" parent="."]
+offset_left = 288.0
+offset_top = 1109.0
+offset_right = 416.0
+offset_bottom = 1237.0
+texture_normal = ExtResource("7_b2dfy")
+texture_pressed = ExtResource("8_l51es")
+
+[connection signal="animation_finished" from="Vomit" to="." method="_on_vomit_animation_finished"]
